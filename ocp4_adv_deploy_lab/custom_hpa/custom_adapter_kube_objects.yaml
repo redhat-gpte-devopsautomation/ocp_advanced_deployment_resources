@@ -230,7 +230,7 @@ spec:
       serviceAccountName: my-metrics-apiserver
       containers:
       - name: custom-metrics-apiserver
-        image: quay.io/nstephan/k8s-prometheus-adapter:v4.0
+        image: quay.io/gpte-devops-automation/k8s-prometheus-adapter:rc0
         args:
         - --secure-port=6443
         - --tls-cert-file=/var/run/serving-cert/serving.crt
