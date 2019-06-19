@@ -5,7 +5,7 @@
   },
   {
     "ParameterKey": "RhcosAmi", 
-    "ParameterValue": "ami-<random_string>" 
+    "ParameterValue": "https://docs.openshift.com/container-platform/4.1/installing/installing_aws_user_infra/installing-aws-user-infra.html#installation-aws-user-infra-rhcos-ami_installing-aws-user-infra"
   },
   {
     "ParameterKey": "AllowedBootstrapSshCidr", 
