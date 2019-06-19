@@ -5,7 +5,7 @@
   },
   {
     "ParameterKey": "InfrastructureName",
-    "ParameterValue": "myclusterid
+    "ParameterValue": "myclusterid"
   },
   {
     "ParameterKey": "HostedZoneId",
