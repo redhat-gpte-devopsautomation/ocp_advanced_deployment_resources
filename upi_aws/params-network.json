@@ -1,0 +1,30 @@
+[
+  {
+    "ParameterKey": "ClusterName",
+    "ParameterValue": "cluster-'"$GUID"'"
+  },
+  {
+    "ParameterKey": "InfrastructureName",
+    "ParameterValue": "'"$CLUSTERID"'"
+  },
+  {
+    "ParameterKey": "HostedZoneId",
+    "ParameterValue": "'"$HOSTEDZONE"'"
+  },
+  {
+    "ParameterKey": "HostedZoneName",
+    "ParameterValue": "'"$HOSTEDZONENAME"'"
+  },
+  {
+    "ParameterKey": "PublicSubnets",
+    "ParameterValue": "'"$PUBSUBNETS"'"
+  },
+  {
+    "ParameterKey": "PrivateSubnets",
+    "ParameterValue": "'"$PRIVSUBNETS"'"
+  },
+  {
+    "ParameterKey": "VpcId",
+    "ParameterValue": "'"$VPCID"'"
+  }
+]
