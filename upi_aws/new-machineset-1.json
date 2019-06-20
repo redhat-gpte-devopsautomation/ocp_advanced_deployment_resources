@@ -1,0 +1,115 @@
+{
+    "apiVersion": "machine.openshift.io/v1beta1",
+    "kind": "MachineSet",
+    "metadata": {
+        "creationTimestamp": "2019-06-19T21:19:11Z",
+        "generation": 1,
+        "labels": {
+            "machine.openshift.io/cluster-api-cluster": "nate-5lsvg"
+        },
+        "name": "nate-5lsvg-worker-us-west-1a",
+        "namespace": "openshift-machine-api",
+        "resourceVersion": "8091",
+        "selfLink": "/apis/machine.openshift.io/v1beta1/namespaces/openshift-machine-api/machinesets/nate-5lsvg-worker-us-west-1a",
+        "uid": "e1e9d318-92d7-11e9-810e-02c91b99e650"
+    },
+    "spec": {
+        "replicas": 2,
+        "selector": {
+            "matchLabels": {
+                "machine.openshift.io/cluster-api-cluster": "nate-5lsvg",
+                "machine.openshift.io/cluster-api-machine-role": "worker",
+                "machine.openshift.io/cluster-api-machine-type": "worker",
+                "machine.openshift.io/cluster-api-machineset": "nate-5lsvg-worker-us-west-1a"
+            }
+        },
+        "template": {
+            "metadata": {
+                "creationTimestamp": null,
+                "labels": {
+                    "machine.openshift.io/cluster-api-cluster": "nate-5lsvg",
+                    "machine.openshift.io/cluster-api-machine-role": "worker",
+                    "machine.openshift.io/cluster-api-machine-type": "worker",
+                    "machine.openshift.io/cluster-api-machineset": "nate-5lsvg-worker-us-west-1a"
+                }
+            },
+            "spec": {
+                "metadata": {
+                    "creationTimestamp": null
+                },
+                "providerSpec": {
+                    "value": {
+                        "ami": {
+                            "id": "ami-0c1d2b5606111ac8c"
+                        },
+                        "apiVersion": "awsproviderconfig.openshift.io/v1beta1",
+                        "blockDevices": [
+                            {
+                                "ebs": {
+                                    "iops": 0,
+                                    "volumeSize": 120,
+                                    "volumeType": "gp2"
+                                }
+                            }
+                        ],
+                        "credentialsSecret": {
+                            "name": "aws-cloud-credentials"
+                        },
+                        "deviceIndex": 0,
+                        "iamInstanceProfile": {
+                            "id": "nate-5lsvg-worker-profile"
+                        },
+                        "instanceType": "m4.large",
+                        "kind": "AWSMachineProviderConfig",
+                        "metadata": {
+                            "creationTimestamp": null
+                        },
+                        "placement": {
+                            "availabilityZone": "us-west-1a",
+                            "region": "us-west-1"
+                        },
+                        "publicIp": null,
+                        "securityGroups": [
+                            {
+                                "filters": [
+                                    {
+                                        "name": "tag:Name",
+                                        "values": [
+                                            "nate-5lsvg-worker-sg"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "subnet": {
+                            "filters": [
+                                {
+                                    "name": "tag:Name",
+                                    "values": [
+                                        "nate-5lsvg-private-us-west-1a"
+                                    ]
+                                }
+                            ]
+                        },
+                        "tags": [
+                            {
+                                "name": "kubernetes.io/cluster/nate-5lsvg",
+                                "value": "owned"
+                            }
+                        ],
+                        "userDataSecret": {
+                            "name": "worker-user-data"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "status": {
+        "availableReplicas": 2,
+        "fullyLabeledReplicas": 2,
+        "observedGeneration": 1,
+        "readyReplicas": 2,
+        "replicas": 2
+    }
+}
