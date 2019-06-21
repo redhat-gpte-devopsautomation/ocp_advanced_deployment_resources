@@ -3,35 +3,35 @@
     "kind": "MachineSet",
     "metadata": {
         "labels": {
-            "machine.openshift.io/cluster-api-cluster": "nate-5lsvg"
+            "machine.openshift.io/cluster-api-cluster": "changeme"
         },
-        "name": "nate-5lsvg-worker-us-west-1a",
+        "name": "changeme",
         "namespace": "openshift-machine-api"
     },
     "spec": {
-        "replicas": 0,
+        "replicas": 1,
         "selector": {
             "matchLabels": {
-                "machine.openshift.io/cluster-api-cluster": "nate-5lsvg",
+                "machine.openshift.io/cluster-api-cluster": "changeme",
                 "machine.openshift.io/cluster-api-machine-role": "worker",
                 "machine.openshift.io/cluster-api-machine-type": "worker",
-                "machine.openshift.io/cluster-api-machineset": "nate-5lsvg-worker-us-west-1a"
+                "machine.openshift.io/cluster-api-machineset": "changeme"
             }
         },
         "template": {
             "metadata": {
                 "labels": {
-                    "machine.openshift.io/cluster-api-cluster": "nate-5lsvg",
+                    "machine.openshift.io/cluster-api-cluster": "changeme",
                     "machine.openshift.io/cluster-api-machine-role": "worker",
                     "machine.openshift.io/cluster-api-machine-type": "worker",
-                    "machine.openshift.io/cluster-api-machineset": "nate-5lsvg-worker-us-west-1a"
+                    "machine.openshift.io/cluster-api-machineset": "changeme"
                 }
             },
             "spec": {
                 "providerSpec": {
                     "value": {
                         "ami": {
-                            "id": "ami-0c1d2b5606111ac8c"
+                            "id": "changeme"
                         },
                         "apiVersion": "awsproviderconfig.openshift.io/v1beta1",
                         "blockDevices": [
@@ -48,22 +48,22 @@
                         },
                         "deviceIndex": 0,
                         "iamInstanceProfile": {
-                            "id": "nate-5lsvg-worker-profile"
+                            "id": "changeme"
                         },
                         "instanceType": "m4.large",
                         "kind": "AWSMachineProviderConfig",
                         "placement": {
-                            "availabilityZone": "us-west-1a",
-                            "region": "us-west-1"
+                            "availabilityZone": "changeme",
+                            "region": "changeme"
                         },
                         "publicIp": null,
                         "securityGroups": [
                             {
                                 "filters": [
                                     {
-                                        "name": "tag:Name",
+                                        "name": "changeme",
                                         "values": [
-                                            "nate-5lsvg-worker-sg"
+                                            "changeme"
                                         ]
                                     }
                                 ]
@@ -72,16 +72,16 @@
                         "subnet": {
                             "filters": [
                                 {
-                                    "name": "tag:Name",
+                                    "name": "changeme",
                                     "values": [
-                                        "nate-5lsvg-private-us-west-1a"
+                                        "changeme"
                                     ]
                                 }
                             ]
                         },
                         "tags": [
                             {
-                                "name": "kubernetes.io/cluster/nate-5lsvg",
+                                "name": "kubernetes.io/cluster/changeme",
                                 "value": "owned"
                             }
                         ],
